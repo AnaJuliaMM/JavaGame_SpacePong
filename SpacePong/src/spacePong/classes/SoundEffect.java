@@ -1,4 +1,4 @@
-package pongSpace.classes;
+package spacePong.classes;
 
 public class SoundEffect {
 
