@@ -6,7 +6,6 @@ import java.awt.event.KeyEvent;
 import java.util.*;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
-
 import javax.swing.*;
 
 @SuppressWarnings("serial")
@@ -170,7 +169,6 @@ public class SpacePong extends JFrame implements Runnable {
 		
 		// Instancie suas formas aqui
 		
-		
 		// Como num desenho animado, as animações são criadas a partir da sobreposição de frames
 		while(true) {
 			
@@ -179,6 +177,7 @@ public class SpacePong extends JFrame implements Runnable {
 			
 			//limpa tela
 			g.clearRect( 0 , 0, getWidth(), getHeight());
+			
 			
 			
 			
