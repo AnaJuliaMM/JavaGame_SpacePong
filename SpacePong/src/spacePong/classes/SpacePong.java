@@ -5,7 +5,6 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.*;
 import java.util.logging.Logger;
-import javax.swing.JFrame;
 
 import javax.swing.*;
 
@@ -15,8 +14,8 @@ public class SpacePong extends JFrame implements Runnable {
 	//Atributos
 	
 		//Atributos: Tamanho da tela
-	private int height = 920;
-	private int width = 1800;
+	private int height = 670;
+	private int width = 694;
 		//Atributos: Teclas setas
 	private boolean left;
     private boolean right;
@@ -166,10 +165,11 @@ public class SpacePong extends JFrame implements Runnable {
 		Graphics g = getBufferStrategy().getDrawGraphics();
 		
 		//Instancia e toca o efeito sonoro em loop infinito
-
+		SoundEffect backgroundSound = new SoundEffect("/sound/música_tema.wav", true);
+		backgroundSound.play();
 		
-		// Instancie suas formas aqui
 		
+		// Instancie suas formas aqui		
 		
 		// Como num desenho animado, as animações são criadas a partir da sobreposição de frames
 		while(true) {
@@ -180,7 +180,10 @@ public class SpacePong extends JFrame implements Runnable {
 			//limpa tela
 			g.clearRect( 0 , 0, getWidth(), getHeight());
 			
-			
+			Image background = new Image("/images/Fase_3.png",0,0);
+			background.draw(g);
+			g.setColor(Color.white);
+			g.drawString("Ola Minionsss", 120, 100);
 			
 			//Exibe a tela
 			getBufferStrategy().show();

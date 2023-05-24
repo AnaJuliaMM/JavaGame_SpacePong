@@ -40,6 +40,7 @@ public class Image {
 	}
 	
 	
+	
 	public void get_collision(int width, int height) {
 		//Colisão com a borda lateral direita
 		if(this.posX + this.width > width) {
