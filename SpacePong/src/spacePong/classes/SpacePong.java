@@ -5,7 +5,11 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.*;
 import java.util.logging.Logger;
+<<<<<<< HEAD
 
+=======
+import javax.swing.JFrame;
+>>>>>>> 0960918c40667958eb6d07b5f40095317d7def41
 import javax.swing.*;
 
 @SuppressWarnings("serial")
@@ -169,8 +173,6 @@ public class SpacePong extends JFrame implements Runnable {
 		backgroundSound.play();
 		
 		
-		// Instancie suas formas aqui		
-		
 		// Como num desenho animado, as animações são criadas a partir da sobreposição de frames
 		while(true) {
 			
@@ -184,6 +186,7 @@ public class SpacePong extends JFrame implements Runnable {
 			background.draw(g);
 			g.setColor(Color.white);
 			g.drawString("Ola Minionsss", 120, 100);
+			
 			
 			//Exibe a tela
 			getBufferStrategy().show();
