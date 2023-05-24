@@ -221,13 +221,11 @@ public class ScreenProtector extends javax.swing.JFrame implements Runnable{
 			//Atualiza o g
 			g = getBufferStrategy().getDrawGraphics();
 			
-			
-			
 			//limpa tela
 			g.clearRect( 0 , 0, getWidth(), getHeight());
 			
-			// Implemente sua animação aqui.
 			
+			// Implemente sua animação aqui.
 			if(right) {
 				main_c.setPosX(main_c.getPosX()+ main_c.getSpeedX());
 				balao_ar.moveX(1);

@@ -5,14 +5,11 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.*;
 import java.util.logging.Logger;
-
 import javax.swing.JFrame;
-
-import classes.ScreenProtector;
-import classes.Shape;
 
 import javax.swing.*;
 
+@SuppressWarnings("serial")
 public class SpacePong extends JFrame implements Runnable {
 	
 	//Atributos
@@ -23,14 +20,6 @@ public class SpacePong extends JFrame implements Runnable {
 		//Atributos: Teclas setas
 	private boolean left;
     private boolean right;
-    private boolean up;
-    private boolean down;
-    	//Atributos: Teclas A W S D
-    private boolean a;
-    private boolean w;
-    private boolean s;
-    private boolean d;
-		//Atributo: tecla espaço
     private boolean space;
     
     
@@ -103,42 +92,7 @@ public class SpacePong extends JFrame implements Runnable {
         	// coloca o valor da variavel right em true enquanto a tecla estiver pressionada
         	right = true;
         }
-    	// Verifica se a tecla seta para cima foi pressiona
-        else if (evt.getKeyCode() == KeyEvent.VK_UP) 
-        {
-        	// coloca o valor da variavel up em true enquanto a tecla estiver pressionada
-            up = true;
-        }
-    	// Verifica se a tecla seta para baixo foi pressiona
-        else if (evt.getKeyCode() == KeyEvent.VK_DOWN) 
-        {
-        	// coloca o valor da variavel down em true enquanto a tecla estiver pressionada
-            down = true;
-        }
-    	// Verifica se a tecla a foi pressiona
-        else if(evt.getKeyCode() == KeyEvent.VK_A)
-        {
-        	// coloca o valor da variavel a em true enquanto a tecla estiver pressionada
-        	a = true;
-        }
-    	// Verifica se a tecla w foi pressiona
-        else if(evt.getKeyCode() == KeyEvent.VK_W) 
-        {
-        	// coloca o valor da variavel w em true enquanto a tecla estiver pressionada
-        	w = true;
-        }
-    	// Verifica se a tecla s foi pressiona
-        else if(evt.getKeyCode() == KeyEvent.VK_S) 
-        {
-        	// coloca o valor da variavel s em true enquanto a tecla estiver pressionada
-        	s = true;
-        }
-    	// Verifica se a tecla d foi pressiona
-        else if(evt.getKeyCode() == KeyEvent.VK_D) 
-        {
-        	// coloca o valor da variavel d em true enquanto a tecla estiver pressionada
-        	d = true;
-        }
+  
     	// Verifica se a tecla espaço foi pressiona
         else if(evt.getKeyCode() == KeyEvent.VK_SPACE) 
         {
@@ -163,40 +117,6 @@ public class SpacePong extends JFrame implements Runnable {
     	else if (evt.getKeyCode() == KeyEvent.VK_RIGHT) {
     		// volta o valor da variavel right em false depois que a tecla for solta
     		right = false;
-        }
-    	// Verifica se a tecla seta para cima foi solta
-    	else if (evt.getKeyCode() == KeyEvent.VK_UP) {
-    		// volta o valor da variavel up em false depois que a tecla for solta
-    		up = false;
-        }
-    	// Verifica se a tecla seta para baixo foi solta
-        else if (evt.getKeyCode() == KeyEvent.VK_DOWN) {
-        	// volta o valor da variavel down em false depois que a tecla for solta
-        	down = false;
-        }
-    	// Verifica se a tecla a foi pressiona
-        else if(evt.getKeyCode() == KeyEvent.VK_A)
-        {
-        	// coloca o valor da variavel a em false enquanto a tecla estiver pressionada
-        	a = false;
-        }
-    	// Verifica se a tecla w foi pressiona
-        else if(evt.getKeyCode() == KeyEvent.VK_W) 
-        {
-        	// coloca o valor da variavel w em false enquanto a tecla estiver pressionada
-        	w = false;
-        }
-    	// Verifica se a tecla s foi pressiona
-        else if(evt.getKeyCode() == KeyEvent.VK_S) 
-        {
-        	// coloca o valor da variavel s em false enquanto a tecla estiver pressionada
-        	s = false;
-        }
-    	// Verifica se a tecla d foi pressiona
-        else if(evt.getKeyCode() == KeyEvent.VK_D) 
-        {
-        	// coloca o valor da variavel d em false enquanto a tecla estiver pressionada
-        	d = false;
         }
     	// Verifica se a tecla espaço foi pressiona
         else if(evt.getKeyCode() == KeyEvent.VK_SPACE) 
